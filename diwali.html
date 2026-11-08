@@ -2,275 +2,260 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>Happy Diwali 🪔</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Happy Diwali</title>
 <style>
-  :root {
-    --bg1: #ffe45c; --bg2: #ffb300;
-    --text: #4a2300; --card: rgba(255,255,255,.55);
-    --accent: #c2410c; --glow: rgba(255,140,0,.5);
-  }
-  body.night {
-    --bg1: #101b4d; --bg2: #040818;
-    --text: #fff3d6; --card: rgba(255,255,255,.08);
-    --accent: #ffc83d; --glow: rgba(255,200,60,.55);
-  }
-  * { box-sizing: border-box; margin: 0; padding: 0; }
-  html, body { min-height: 100%; }
-  body {
-    font-family: Georgia, 'Times New Roman', serif;
-    color: var(--text);
-    background: linear-gradient(160deg, var(--bg1), var(--bg2)) fixed;
-    transition: background 1.5s, color 1s;
-    text-align: center;
-    overflow-x: hidden;
-  }
-  #fx { position: fixed; inset: 0; width: 100%; height: 100%; pointer-events: none; z-index: 0; }
-  main { position: relative; z-index: 1; max-width: 760px; margin: 0 auto; padding: 32px 18px 48px; }
-
-  h1 { font-size: clamp(2.2rem, 8vw, 4rem); color: var(--accent); text-shadow: 0 0 18px var(--glow); line-height: 1.1; }
-  .sub { margin-top: 8px; font-size: 1.1rem; opacity: .85; }
-
-  .diyas { display: flex; justify-content: center; gap: 22px; margin: 28px 0 10px; }
-  .diya { position: relative; width: 64px; height: 44px; }
-  .bowl { position: absolute; bottom: 0; width: 64px; height: 26px; background: linear-gradient(#e0701a, #8a3a06);
-          border-radius: 0 0 64px 64px / 0 0 26px 26px; box-shadow: 0 6px 18px rgba(0,0,0,.25); }
-  .bowl::before { content: ""; position: absolute; top: -5px; left: -4px; right: -4px; height: 9px; background: #f08a2a; border-radius: 50%; }
-  .flame { position: absolute; bottom: 24px; left: 50%; width: 16px; height: 30px; margin-left: -8px;
-           background: radial-gradient(ellipse at 50% 75%, #fff7b0 0%, #ffcc33 45%, #ff7a00 80%, transparent 100%);
-           border-radius: 50% 50% 50% 50% / 65% 65% 35% 35%;
-           filter: drop-shadow(0 0 14px #ffae1a); transform-origin: 50% 100%;
-           animation: flicker 1.1s infinite ease-in-out alternate; }
-  .diya:nth-child(2) .flame { animation-delay: .3s; }
-  .diya:nth-child(3) .flame { animation-delay: .6s; }
-  .diya:nth-child(4) .flame { animation-delay: .15s; }
-  .diya:nth-child(5) .flame { animation-delay: .45s; }
-  @keyframes flicker {
-    0%   { transform: scale(1, 1) rotate(-2deg); }
-    50%  { transform: scale(.92, 1.08) rotate(2deg); }
-    100% { transform: scale(1.05, .95) rotate(-1deg); }
-  }
-
-  .card { background: var(--card); backdrop-filter: blur(6px); border-radius: 22px; padding: 22px 20px; margin: 22px 0;
-          box-shadow: 0 8px 30px rgba(0,0,0,.15); border: 1px solid rgba(255,255,255,.25); }
-  .card h2 { font-size: 1.1rem; letter-spacing: .08em; text-transform: uppercase; opacity: .8; margin-bottom: 10px; }
-
-  #countdown { font-size: clamp(2rem, 9vw, 3.2rem); font-weight: bold; color: var(--accent); font-variant-numeric: tabular-nums; }
-  #phase, #loc { margin-top: 6px; font-size: .95rem; opacity: .85; }
-  .linkbtn { background: none; border: none; color: var(--accent); text-decoration: underline; cursor: pointer; font: inherit; }
-
-  .message { font-size: clamp(1.25rem, 4.5vw, 1.8rem); font-style: italic; line-height: 1.5; }
-  .message span { display: block; margin-top: 10px; font-size: 2rem; }
-
-  .wish-form { display: flex; flex-wrap: wrap; gap: 10px; justify-content: center; margin-top: 8px; }
-  input[type=text] { flex: 1 1 200px; padding: 12px 14px; border-radius: 12px; border: 2px solid var(--accent);
-                     font: inherit; background: rgba(255,255,255,.85); color: #3a1a00; }
-  button.main, a.main { padding: 12px 20px; border: none; border-radius: 12px; font: inherit; font-weight: bold; cursor: pointer;
-                        background: var(--accent); color: #fff; text-decoration: none; display: inline-block; }
-  body.night button.main, body.night a.main { color: #2a1500; }
-  button.main:hover, a.main:hover { filter: brightness(1.1); }
-  #greeting { margin-top: 16px; font-size: 1.4rem; color: var(--accent); min-height: 1.8em; }
-  .actions { display: flex; flex-wrap: wrap; gap: 10px; justify-content: center; margin-top: 12px; }
-
-  footer { margin-top: 30px; font-size: 1rem; }
-  footer a { color: var(--accent); font-weight: bold; word-break: break-all; }
-  .hint { font-size: .85rem; opacity: .7; margin-top: 10px; }
+:root{--bg1:#ffe45c;--bg2:#ffb300;--text:#4a2300;--card:rgba(255,255,255,.55);--accent:#c2410c;--glow:rgba(255,140,0,.5);}
+body.night{--bg1:#101b4d;--bg2:#040818;--text:#fff3d6;--card:rgba(255,255,255,.08);--accent:#ffc83d;--glow:rgba(255,200,60,.55);}
+*{box-sizing:border-box;margin:0;padding:0;}
+html,body{min-height:100%;}
+body{font-family:Georgia,'Times New Roman',serif;color:var(--text);background:linear-gradient(160deg,var(--bg1),var(--bg2)) fixed;transition:background 1.5s,color 1s;text-align:center;overflow-x:hidden;}
+#fx{position:fixed;top:0;left:0;width:100%;height:100%;pointer-events:none;z-index:0;}
+main{position:relative;z-index:1;max-width:760px;margin:0 auto;padding:32px 18px 48px;}
+h1{font-size:clamp(2.2rem,8vw,4rem);color:var(--accent);text-shadow:0 0 18px var(--glow);line-height:1.1;}
+.sub{margin-top:8px;font-size:1.1rem;opacity:.85;}
+.diyas{display:flex;justify-content:center;gap:22px;margin:28px 0 10px;}
+.diya{position:relative;width:64px;height:44px;}
+.bowl{position:absolute;bottom:0;width:64px;height:26px;background:linear-gradient(#e0701a,#8a3a06);border-radius:0 0 64px 64px/0 0 26px 26px;box-shadow:0 6px 18px rgba(0,0,0,.25);}
+.bowl::before{content:"";position:absolute;top:-5px;left:-4px;right:-4px;height:9px;background:#f08a2a;border-radius:50%;}
+.flame{position:absolute;bottom:24px;left:50%;width:16px;height:30px;margin-left:-8px;background:radial-gradient(ellipse at 50% 75%,#fff7b0 0%,#ffcc33 45%,#ff7a00 80%,transparent 100%);border-radius:50% 50% 50% 50%/65% 65% 35% 35%;filter:drop-shadow(0 0 14px #ffae1a);transform-origin:50% 100%;animation:flicker 1.1s infinite ease-in-out alternate;}
+.diya:nth-child(2) .flame{animation-delay:.3s;}
+.diya:nth-child(3) .flame{animation-delay:.6s;}
+.diya:nth-child(4) .flame{animation-delay:.15s;}
+.diya:nth-child(5) .flame{animation-delay:.45s;}
+@keyframes flicker{0%{transform:scale(1,1) rotate(-2deg);}50%{transform:scale(.92,1.08) rotate(2deg);}100%{transform:scale(1.05,.95) rotate(-1deg);}}
+.card{background:var(--card);-webkit-backdrop-filter:blur(6px);backdrop-filter:blur(6px);border-radius:22px;padding:22px 20px;margin:22px 0;box-shadow:0 8px 30px rgba(0,0,0,.15);border:1px solid rgba(255,255,255,.25);}
+.card h2{font-size:1.1rem;letter-spacing:.08em;text-transform:uppercase;opacity:.8;margin-bottom:10px;}
+#countdown{font-size:clamp(2rem,9vw,3.2rem);font-weight:bold;color:var(--accent);font-variant-numeric:tabular-nums;}
+#phase,#loc{margin-top:6px;font-size:.95rem;opacity:.85;}
+.linkbtn{background:none;border:none;color:var(--accent);text-decoration:underline;cursor:pointer;font:inherit;}
+.message{font-size:clamp(1.25rem,4.5vw,1.8rem);font-style:italic;line-height:1.5;}
+.message span{display:block;margin-top:10px;font-size:2rem;}
+.wish-form{display:flex;flex-wrap:wrap;gap:10px;justify-content:center;margin-top:8px;}
+input[type=text]{flex:1 1 200px;padding:12px 14px;border-radius:12px;border:2px solid var(--accent);font:inherit;background:rgba(255,255,255,.85);color:#3a1a00;}
+button.main,a.main{padding:12px 20px;border:none;border-radius:12px;font:inherit;font-weight:bold;cursor:pointer;background:var(--accent);color:#fff;text-decoration:none;display:inline-block;}
+body.night button.main,body.night a.main{color:#2a1500;}
+#greeting{margin-top:16px;font-size:1.4rem;color:var(--accent);min-height:1.8em;}
+.actions{display:flex;flex-wrap:wrap;gap:10px;justify-content:center;margin-top:12px;}
+footer{margin-top:30px;font-size:1rem;}
+footer a{color:var(--accent);font-weight:bold;word-break:break-all;}
+.hint{font-size:.85rem;opacity:.7;margin-top:10px;}
 </style>
 </head>
 <body>
 <canvas id="fx"></canvas>
-
 <main>
-  <h1>Happy Diwali! 🪔</h1>
-  <p class="sub">May the festival of lights fill your life with joy, health and prosperity ✨</p>
+<h1>Happy Diwali! &#129684;</h1>
+<p class="sub">May the festival of lights fill your life with joy, health and prosperity &#10024;</p>
 
-  <div class="diyas" aria-hidden="true">
-    <div class="diya"><div class="flame"></div><div class="bowl"></div></div>
-    <div class="diya"><div class="flame"></div><div class="bowl"></div></div>
-    <div class="diya"><div class="flame"></div><div class="bowl"></div></div>
-    <div class="diya"><div class="flame"></div><div class="bowl"></div></div>
-    <div class="diya"><div class="flame"></div><div class="bowl"></div></div>
-  </div>
+<div class="diyas" aria-hidden="true">
+<div class="diya"><div class="flame"></div><div class="bowl"></div></div>
+<div class="diya"><div class="flame"></div><div class="bowl"></div></div>
+<div class="diya"><div class="flame"></div><div class="bowl"></div></div>
+<div class="diya"><div class="flame"></div><div class="bowl"></div></div>
+<div class="diya"><div class="flame"></div><div class="bowl"></div></div>
+</div>
 
-  <section class="card">
-    <h2 id="cdTitle">Time left till night</h2>
-    <div id="countdown">--:--:--</div>
-    <div id="phase"></div>
-    <div id="loc"></div>
-  </section>
+<section class="card">
+<h2 id="cdTitle">Time left till night</h2>
+<div id="countdown">--:--:--</div>
+<div id="phase"></div>
+<div id="loc"></div>
+</section>
 
-  <section class="card">
-    <p class="message">
-      “This Diwali, may you burn away your problems, not people.”
-      <span>🎆🪔🎇</span>
-    </p>
-  </section>
+<section class="card">
+<p class="message">&ldquo;This Diwali, may you burn away your problems, not people.&rdquo;<span>&#127878;&#129684;&#127879;</span></p>
+</section>
 
-  <section class="card">
-    <h2>Send a personal wish</h2>
-    <div class="wish-form">
-      <input type="text" id="name" placeholder="Enter a name…" maxlength="30">
-      <button class="main" id="makeWish">Create wish</button>
-    </div>
-    <div id="greeting"></div>
-    <div class="actions" id="shareBox" style="display:none">
-      <a class="main" id="wa" target="_blank" rel="noopener">Share on WhatsApp</a>
-      <button class="main" id="copy">Copy wish</button>
-    </div>
-    <p class="hint">Tip: tap anywhere on the page for fireworks 🎆</p>
-  </section>
+<section class="card">
+<h2>Send a personal wish</h2>
+<div class="wish-form">
+<input type="text" id="name" placeholder="Enter a name" maxlength="30">
+<button class="main" id="makeWish">Create wish</button>
+</div>
+<div id="greeting"></div>
+<div class="actions" id="shareBox" style="display:none">
+<a class="main" id="wa" target="_blank" rel="noopener">Share on WhatsApp</a>
+<button class="main" id="copy">Copy wish</button>
+</div>
+<p class="hint">Tip: tap anywhere on the page for fireworks</p>
+</section>
 
-  <footer>
-    <p>For more websites, contact us:<br>
-      <a href="mailto:arshdeepsinghpanesar77@gmail.com">arshdeepsinghpanesar77@gmail.com</a></p>
-  </footer>
+<footer>
+<p>For more websites, contact us:<br>
+<a href="mailto:arshdeepsinghpanesar77@gmail.com">arshdeepsinghpanesar77@gmail.com</a></p>
+</footer>
 </main>
 
 <script>
-/* ---------- Sunrise / sunset from latitude & longitude ---------- */
-const rad = d => d * Math.PI / 180, deg = r => r * 180 / Math.PI;
-const mod = (a, n) => ((a % n) + n) % n;
+var DIYA = "\uD83E\uDE94";
+var SPARK = "\u2728";
 
-function sunEvent(date, lat, lng, rising) {
-  const start = new Date(date.getFullYear(), 0, 0);
-  const N = Math.floor((date - start) / 864e5);
-  const lngHour = lng / 15;
-  const t = N + ((rising ? 6 : 18) - lngHour) / 24;
-  const M = 0.9856 * t - 3.289;
-  const L = mod(M + 1.916 * Math.sin(rad(M)) + 0.02 * Math.sin(rad(2 * M)) + 282.634, 360);
-  let RA = mod(deg(Math.atan(0.91764 * Math.tan(rad(L)))), 360);
-  RA += Math.floor(L / 90) * 90 - Math.floor(RA / 90) * 90;
-  RA /= 15;
-  const sinDec = 0.39782 * Math.sin(rad(L));
-  const cosDec = Math.cos(Math.asin(sinDec));
-  const cosH = (Math.cos(rad(90.833)) - sinDec * Math.sin(rad(lat))) / (cosDec * Math.cos(rad(lat)));
-  if (cosH > 1 || cosH < -1) return null;
-  const H = (rising ? 360 - deg(Math.acos(cosH)) : deg(Math.acos(cosH))) / 15;
-  const T = H + RA - 0.06571 * t - 6.622;
-  const UT = mod(T - lngHour, 24);
-  const base = Date.UTC(date.getFullYear(), date.getMonth(), date.getDate());
+function rad(d){ return d * Math.PI / 180; }
+function deg(r){ return r * 180 / Math.PI; }
+function mod(a, n){ return ((a % n) + n) % n; }
+
+function sunEvent(date, lat, lng, rising){
+  var start = new Date(date.getFullYear(), 0, 0);
+  var N = Math.floor((date - start) / 864e5);
+  var lngHour = lng / 15;
+  var t = N + ((rising ? 6 : 18) - lngHour) / 24;
+  var M = 0.9856 * t - 3.289;
+  var L = mod(M + 1.916 * Math.sin(rad(M)) + 0.02 * Math.sin(rad(2 * M)) + 282.634, 360);
+  var RA = mod(deg(Math.atan(0.91764 * Math.tan(rad(L)))), 360);
+  RA = RA + (Math.floor(L / 90) * 90 - Math.floor(RA / 90) * 90);
+  RA = RA / 15;
+  var sinDec = 0.39782 * Math.sin(rad(L));
+  var cosDec = Math.cos(Math.asin(sinDec));
+  var cosH = (Math.cos(rad(90.833)) - sinDec * Math.sin(rad(lat))) / (cosDec * Math.cos(rad(lat)));
+  if (cosH > 1 || cosH < -1) { return null; }
+  var H = (rising ? 360 - deg(Math.acos(cosH)) : deg(Math.acos(cosH))) / 15;
+  var T = H + RA - 0.06571 * t - 6.622;
+  var UT = mod(T - lngHour, 24);
+  var base = Date.UTC(date.getFullYear(), date.getMonth(), date.getDate());
   return new Date(base + UT * 36e5);
 }
 
-/* Fallback if location is not allowed: sunrise 6:00 AM, sunset 6:30 PM */
-let place = { lat: null, lng: null, label: "Using default sunset time (6:30 PM)." };
+var place = { lat: null, lng: null, label: "Using default sunset time (6:30 PM)." };
 
-function todaysSun(now) {
-  let rise, set;
+function todaysSun(now){
+  var rise, set, day0;
   if (place.lat !== null) {
     rise = sunEvent(now, place.lat, place.lng, true);
-    set  = sunEvent(now, place.lat, place.lng, false);
+    set = sunEvent(now, place.lat, place.lng, false);
     if (rise && set) {
-      const fix = d => { while (d - now > 18 * 36e5) d = new Date(+d - 864e5); while (now - d > 18 * 36e5) d = new Date(+d + 864e5); return d; };
-      rise = fix(rise); set = fix(set);
-      const day0 = new Date(now.getFullYear(), now.getMonth(), now.getDate());
-      while (rise < day0) rise = new Date(+rise + 864e5);
-      while (rise - day0 >= 864e5) rise = new Date(+rise - 864e5);
-      while (set < rise) set = new Date(+set + 864e5);
-      while (set - rise > 864e5) set = new Date(+set - 864e5);
-      return { rise, set };
+      day0 = new Date(now.getFullYear(), now.getMonth(), now.getDate());
+      while (rise < day0) { rise = new Date(rise.getTime() + 864e5); }
+      while (rise - day0 >= 864e5) { rise = new Date(rise.getTime() - 864e5); }
+      while (set < rise) { set = new Date(set.getTime() + 864e5); }
+      while (set - rise > 864e5) { set = new Date(set.getTime() - 864e5); }
+      return { rise: rise, set: set };
     }
   }
-  const d = new Date(now.getFullYear(), now.getMonth(), now.getDate());
-  return { rise: new Date(+d + 6 * 36e5), set: new Date(+d + 18.5 * 36e5) };
+  day0 = new Date(now.getFullYear(), now.getMonth(), now.getDate());
+  return { rise: new Date(day0.getTime() + 6 * 36e5), set: new Date(day0.getTime() + 18.5 * 36e5) };
 }
 
-const pad = n => String(n).padStart(2, "0");
-const fmt = ms => { const s = Math.max(0, Math.floor(ms / 1000)); return pad(Math.floor(s / 3600)) + ":" + pad(Math.floor(s % 3600 / 60)) + ":" + pad(s % 60); };
-const clock = d => d.toLocaleTimeString([], { hour: "2-digit", minute: "2-digit" });
+function pad(n){ return (n < 10 ? "0" : "") + n; }
+function fmt(ms){
+  var s = Math.max(0, Math.floor(ms / 1000));
+  return pad(Math.floor(s / 3600)) + ":" + pad(Math.floor((s % 3600) / 60)) + ":" + pad(s % 60);
+}
+function clock(d){ return d.toLocaleTimeString([], { hour: "2-digit", minute: "2-digit" }); }
 
-let isNight = null;
-function tick() {
-  const now = new Date();
-  const { rise, set } = todaysSun(now);
-  const night = now >= set || now < rise;
+var isNight = null;
+
+function tick(){
+  var now = new Date();
+  var sun = todaysSun(now);
+  var rise = sun.rise, set = sun.set;
+  var night = (now >= set) || (now < rise);
 
   if (night !== isNight) {
     isNight = night;
-    document.body.classList.toggle("night", night);
+    if (night) { document.body.classList.add("night"); }
+    else { document.body.classList.remove("night"); }
   }
 
-  const title = document.getElementById("cdTitle");
-  const cd = document.getElementById("countdown");
-  const phase = document.getElementById("phase");
+  var title = document.getElementById("cdTitle");
+  var cd = document.getElementById("countdown");
+  var phase = document.getElementById("phase");
 
   if (!night) {
     title.textContent = "Time left till night";
     cd.textContent = fmt(set - now);
-    phase.textContent = "☀️ Sunset at " + clock(set);
+    phase.textContent = "\u2600 Sunset at " + clock(set);
   } else {
-    const nextRise = now < rise ? rise : new Date(+rise + 864e5);
-    title.textContent = "It’s night — light your diyas! 🌙";
+    var nextRise = (now < rise) ? rise : new Date(rise.getTime() + 864e5);
+    title.textContent = "It\u2019s night \u2014 light your diyas! \uD83C\uDF19";
     cd.textContent = fmt(nextRise - now);
     phase.textContent = "Time until sunrise (" + clock(nextRise) + ")";
   }
 
-  document.getElementById("loc").innerHTML = place.lat === null
-    ? place.label + ' <button class="linkbtn" id="locBtn">Use my location</button>'
-    : "📍 Based on your location";
-  const b = document.getElementById("locBtn");
-  if (b) b.onclick = askLocation;
+  var loc = document.getElementById("loc");
+  if (place.lat === null) {
+    loc.innerHTML = place.label + ' <button class="linkbtn" id="locBtn">Use my location</button>';
+    document.getElementById("locBtn").onclick = askLocation;
+  } else {
+    loc.textContent = "\uD83D\uDCCD Based on your location";
+  }
 }
 
-function askLocation() {
-  if (!navigator.geolocation) return;
+function askLocation(){
+  if (!navigator.geolocation) { return; }
   navigator.geolocation.getCurrentPosition(
-    p => { place = { lat: p.coords.latitude, lng: p.coords.longitude, label: "" }; tick(); },
-    () => { place.label = "Location blocked — using default sunset time (6:30 PM)."; tick(); },
+    function(p){ place = { lat: p.coords.latitude, lng: p.coords.longitude, label: "" }; tick(); },
+    function(){ place.label = "Location blocked \u2014 using default sunset time (6:30 PM)."; tick(); },
     { timeout: 8000 }
   );
 }
+
 tick();
 setInterval(tick, 1000);
 askLocation();
 
-/* ---------- Personal wish ---------- */
-let wishText = "";
-document.getElementById("makeWish").onclick = () => {
-  const name = document.getElementById("name").value.trim();
-  const who = name ? ", " + name : "";
-  wishText = "🪔 Happy Diwali" + who + "! 🪔\nMay this festival of lights bring you happiness, success and peace. ✨";
-  document.getElementById("greeting").textContent = "✨ Happy Diwali" + who + "! ✨";
+var wishText = "";
+
+document.getElementById("makeWish").onclick = function(){
+  var name = document.getElementById("name").value.replace(/^\s+|\s+$/g, "");
+  var who = name ? ", " + name : "";
+  wishText = DIYA + " Happy Diwali" + who + "! " + DIYA + "\nMay this festival of lights bring you happiness, success and peace. " + SPARK;
+  document.getElementById("greeting").textContent = SPARK + " Happy Diwali" + who + "! " + SPARK;
   document.getElementById("wa").href = "https://wa.me/?text=" + encodeURIComponent(wishText);
   document.getElementById("shareBox").style.display = "flex";
-  burst(innerWidth / 2, innerHeight / 3);
-  burst(innerWidth / 4, innerHeight / 4);
-  burst(innerWidth * 0.75, innerHeight / 4);
-};
-document.getElementById("copy").onclick = async e => {
-  try { await navigator.clipboard.writeText(wishText); e.target.textContent = "Copied ✓"; }
-  catch (err) { e.target.textContent = "Copy not supported"; }
-  setTimeout(() => e.target.textContent = "Copy wish", 1800);
+  burst(window.innerWidth / 2, window.innerHeight / 3);
+  burst(window.innerWidth / 4, window.innerHeight / 4);
+  burst(window.innerWidth * 0.75, window.innerHeight / 4);
 };
 
-/* ---------- Fireworks ---------- */
-const cv = document.getElementById("fx"), ctx = cv.getContext("2d");
-let parts = [];
-function resize() { cv.width = innerWidth; cv.height = innerHeight; }
-addEventListener("resize", resize); resize();
+document.getElementById("copy").onclick = function(e){
+  var btn = e.target;
+  if (navigator.clipboard && navigator.clipboard.writeText) {
+    navigator.clipboard.writeText(wishText).then(function(){ btn.textContent = "Copied \u2713"; });
+  } else {
+    btn.textContent = "Copy not supported";
+  }
+  setTimeout(function(){ btn.textContent = "Copy wish"; }, 1800);
+};
 
-function burst(x, y) {
-  const hue = Math.random() * 60 + 15;
-  for (let i = 0; i < 70; i++) {
-    const a = Math.random() * Math.PI * 2, s = Math.random() * 5 + 1.5;
+var cv = document.getElementById("fx");
+var ctx = cv.getContext("2d");
+var parts = [];
+
+function resize(){ cv.width = window.innerWidth; cv.height = window.innerHeight; }
+window.addEventListener("resize", resize);
+resize();
+
+function burst(x, y){
+  var hue = Math.random() * 60 + 15;
+  for (var i = 0; i < 70; i++) {
+    var a = Math.random() * Math.PI * 2;
+    var s = Math.random() * 5 + 1.5;
     parts.push({ x: x, y: y, vx: Math.cos(a) * s, vy: Math.sin(a) * s, life: 1, hue: hue + Math.random() * 30 });
   }
 }
-function draw() {
+
+function draw(){
   ctx.clearRect(0, 0, cv.width, cv.height);
-  parts = parts.filter(p => p.life > 0);
-  for (const p of parts) {
+  parts = parts.filter(function(p){ return p.life > 0; });
+  for (var i = 0; i < parts.length; i++) {
+    var p = parts[i];
     p.x += p.vx; p.y += p.vy; p.vy += 0.06; p.vx *= 0.985; p.life -= 0.014;
     ctx.globalAlpha = Math.max(p.life, 0);
     ctx.fillStyle = "hsl(" + p.hue + ",100%," + (isNight ? 62 : 45) + "%)";
-    ctx.beginPath(); ctx.arc(p.x, p.y, 2.4, 0, 7); ctx.fill();
+    ctx.beginPath();
+    ctx.arc(p.x, p.y, 2.4, 0, 7);
+    ctx.fill();
   }
   requestAnimationFrame(draw);
 }
 draw();
-addEventListener("pointerdown", e => { if (e.target.tagName !== "INPUT") burst(e.clientX, e.clientY); });
-setInterval(() => burst(Math.random() * innerWidth, Math.random() * innerHeight * 0.55), 2000);
-setTimeout(() => burst(innerWidth / 2, innerHeight / 3), 500);
+
+window.addEventListener("pointerdown", function(e){
+  if (e.target.tagName !== "INPUT") { burst(e.clientX, e.clientY); }
+});
+setInterval(function(){ burst(Math.random() * window.innerWidth, Math.random() * window.innerHeight * 0.55); }, 2000);
+setTimeout(function(){ burst(window.innerWidth / 2, window.innerHeight / 3); }, 500);
 </script>
 </body>
-</html>
+</html
